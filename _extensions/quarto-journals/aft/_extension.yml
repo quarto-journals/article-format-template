@@ -16,7 +16,8 @@ contributes:
           echo: false
     pdf:
       # define default configuration for the pdf version of your format
-      links-as-notes: true
+      colorlinks: true
+      urlcolor: red
       fig-width: 6.5
       fig-height: 4.5
       biblio-style: te.bst

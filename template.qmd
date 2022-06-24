@@ -42,7 +42,7 @@ Everything for the extensions is in `_extensions/quarto-journals/aft` folder. Se
 
 - Your extension can make shortcodes and lua filters available. This document shows the effect of the one provided in the `aft` format. See Lua filter in `extensions/quarto-journals/aft`
 
-- `aft` format sets some defaults which are different from `pdf` or `html`. See `_extensions/quarto-journals/aft/_extension.yml`
+- `aft` format sets some defaults which are different from `pdf` or `html`, link setting links to URL in read inside PDF output. See `_extensions/quarto-journals/aft/_extension.yml`
 
 Source repository for this template format can found on [Github](https://github.com/quarto-journals/article-format-template)
 
@@ -70,6 +70,7 @@ But you can set `echo` option to `true`
 ```{r}
 #| echo: true
 m_pois <- glm(Days ~ (Eth + Sex + Age + Lrn)^2, data = quine, family = poisson)
+summary(m_pois)
 ```
 
 ## Text color {#sec-summary}
