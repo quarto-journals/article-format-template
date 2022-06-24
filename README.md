@@ -2,51 +2,90 @@
 
 Template for creating a new journal article format for Quarto.
 
+## Structure of this repository
 
-## Creating a custom format
+Format extension files are in `_extensions`. We are using namespace `quarto-journals` and for this template repo our format will be called `aft`..
 
-- Use this template repo to create a new repository for your format
-- Once you are acquainted with the content, remove the resource that are there as example (see below)
-- Keep and tweak the template partials that you need
-- Add any resource your format will need
-- Modify `_extension.yml`
-- Modify the skeleton `template.qmd`
+### `_extensions\quarto-journals\aft` 
 
-## Structure
+In this folder you'll find everything that defines the extensions which could be installed using `quarto install extension` or be part of the template when using `quarto use template`
 
-Format extension files are in `_extensions`. We are using namespace `quarto-journals` and for this template repo our format will be called `aft`.
+#### Format Metadata
 
-`_extensions\quarto-journals\aft` contains the following
+This is in `_extension.yml` is where all the metadata about the format are defined so that Quarto knows what to use.
 
-### Format Metadata
+> **Adapt this file for you own template**
 
-This is in `_extension.yml` is where all the metadata about the format are defined so that Quarto knows what to use. 
+#### Partials
 
+In `partials`, there are the `.tex` files that will be used as Pandoc's template. We provide here all the partials supported by Quarto and custom one for this format. Quarto allows to provide partials to ease the process of tweaking the default latex Pandoc's template and keeping it up to date.
 
-### Partials
+This template repo contains all the relevant partials that you can use with Quarto _as example_. We only tweaked `title.tex` to show the usage of a custom partials called `_custom.tex`
 
-In `partials` are the `.tex` files that will be used as Pandoc's template. We provide here all the partials supported by Quarto and custom one for this format. 
-Quarto allows to provide partials to ease the process of tweaking the default latex Pandoc's template and keeping it up to date. 
+> **Only keep the partials that you need to tweak for the format you are creating**
 
-This template repo contains all the relevant partials that you can use with Quarto _as example_.
+#### Lua Filters
 
-**Only keep the partials that you need to tweak for the format you are creating**
+Most of the time, custom formats will need Lua filters to provide specific feature like cross format supports or provides custom shortcodes through the Quarto extension mechanism. Those filters will be available to the user and could be used in the custom formats (according to `_extensions` metadata). 
 
-## `.quartoignore`
+We have provided two examples: 
 
-This files must contain any other folder and file that should not be downloaded to user project when `quarto template install` is used.
-`style-guide` folder in this repo is among those.
+    - `color-text.lua`, a Lua filter used to add color to inline text for PDF and HTML outputs using the same Markdown syntax
+    - `shorcodes.lua`, a Lua filter which follow [Quarto custom shortcodes](https://quarto.org/docs/authoring/shortcodes.html#custom-shortcodes) guidelines to provide a `{{< LaTeX >}}` shortcode to nicely print LaTeX in PDF and HTML. 
+
+> **Remove or replace with your own Lua filters**
+
+#### Format resources
+
+Resources required by the format needs to be available. We have provided two examples: 
+
+- `te.bst` is a biblio style file for demo. It has been downloaded from https://www.economics.utoronto.ca/osborne/latex/TEBST.HTM (http://econtheory.org/technical/te.bst) - Licence [LPPL](https://www.latex-project.org/lppl/)
+
+- `aft.cls` is a dummy class file for this example format. It is a copy of official `article.cls`, the one provided in LaTeX installation (i.e at `kpsewhich article.cls`) and renamed as example (Licence LaTeX Project Public License)
+
+- `custom.scss` is a style file to have a custom theme for our HTML format so that our Lua filter feature `color-tex.lua` works.
+
+Those files are referenced within the `_extension.yml` to be used with our example format.
+
+> **Remove and replace with your own resources**
+
+### `.quartoignore` 
+
+Sometimes it is useful to have some files only needed for reference or for development. They should be available in the source repository but not downloaded to the user when `quarto use template` is used.
+
+> **Use `.quartoignore` to register such file and folder (one file or folder per line)**
+
+### `style-guide` folder
+
+For `quarto-journals` format, use `style-guide` folder to include any documentation and resourced used for format creation, like a journal style guide or original `.tex` template. This folder is already added in `.quartoignore` in this example repo.
+
+> **Remove, rename or add to this folder**
+
+### `template.qmd`
+
+This file is the template document that shows how to use the custom format. It will be downloaded with other resource by `quarto use template`, and even offered to be renamed if the name `template.qmd` is used. 
+
+This file will usually use the custom format (here `aft-pdf` and `aft-html`) and show how to use the template. When you'll copy this template, you should be able to render this document to the demo format. 
+
+> **Adapt this file to provide a suitable template for your custom format**
 
 ### Other files
 
-Some resources are included as examples and can be removed
+Other files are needed by the template and are usually user provided - they are not part of the custom format. 
 
-- Example `te.bst` file has been downloaded from https://www.economics.utoronto.ca/osborne/latex/TEBST.HTM (http://econtheory.org/technical/te.bst) - Licence [LPPL](https://www.latex-project.org/lppl/)
+Here `bibliography.bib` is here to demo the usage of the bst file from the custom format.
 
-- `aft.cls` is a copy of `article.cls`, the one provided in LaTeX installation renamed as example.  (at `kpsewhich article.cls`) (Licence LaTeX Project Public License)
+> **Remove this file and provide a suitable one for your template**
 
-- `custom.scss` is a style file to have a custom theme for our HTML format
+## Checklist: Creating a custom format
 
-- `filter.lua` and `shortcodes.lua` are Lua Filter to use within our format and made available to Quarto by our Extension.
+Here is the checklist to help you know what to modify:
 
-- `bibliography.bib` is provided as example for `template.qmd`
+- Use this template repo to create a new repository for your format (Click on "Use this template" to create new github repo)
+- Once you are acquainted with the content, remove the resources that are there only as example (see above)
+- Keep only the template partials that you need to tweak, and add custom ones if needed
+- Add any Lua filters for shortcodes and other that would be useful to create the expected output format
+- Add any external resource your format will need, and that should be part of the extension format that will be downloaded,
+- Check `_extension.yml` is updated correctly
+- Modify the skeleton `template.qmd` to your format and add any required resources to be downloaded to user.
+- Check `.quartoignore` is updated which everything that should not be downloaded.
