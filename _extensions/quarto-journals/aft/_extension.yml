@@ -1,0 +1,36 @@
+title: Article Format Template
+author: Christophe Dervieux
+version: 0.1.0
+contributes:
+  format:
+    common:
+      # define below YAML configuration common to all formats
+      filters:
+        # You can include here Lua filters from your extension format 
+        - filter.lua
+      shortcodes:
+        # You can include here Lua filters defining shortcodes from your extension
+        - shortcodes.lua
+      knitr:
+        opts_chunk:
+          echo: false
+    pdf:
+      # define default configuration for the pdf version of your format
+      links-as-notes: true
+      fig-width: 6.5
+      fig-height: 4.5
+      biblio-style: te.bst
+      documentclass: aft
+      header-includes: |
+        \definecolor{mypink}{RGB}{219, 48, 122}
+      template-partials:
+        # Add here the partials your format is using
+        - "partials/doc-class.tex"
+        - "partials/title.tex"
+        - "partials/before-body.tex"
+        - "partials/_custom.tex"
+    html:
+      # define default configuration for the html version of your format
+      number-sections: true
+      toc: true
+      theme: custom.scss
