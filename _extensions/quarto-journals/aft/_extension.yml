@@ -7,7 +7,7 @@ contributes:
       # define below YAML configuration common to all formats
       filters:
         # You can include here Lua filters from your extension format 
-        - filter.lua
+        - color-text.lua
       shortcodes:
         # You can include here Lua filters defining shortcodes from your extension
         - shortcodes.lua
