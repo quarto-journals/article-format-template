@@ -32,9 +32,7 @@ bibliography: bibliography.bib
 This is a dummy example only for the purpose to use this repo as a template starter for creating new formats.  For this `article-format-template` we call our dummy article `aft`. 
 :::
 
-::: callout-tip
-If this template is named `template.qmd`, `quarto use template` will allow user to renamed `.qmd` before downloading.
-:::
+This quarto extension format supports PDF and HTML outputs. `quarto-journals` is aiming at porting existing {{< latex >}} template from journals to be used with quarto. PDF format is what require the most work to fit the journals guideline, but Quarto offer a nice rendering for HTML output too. This demo format template only use basic HTML format without any customization for now.
 
 Everything for the extensions is in `_extensions/quarto-journals/aft` folder. See Quarto doc for details. 
 
@@ -75,13 +73,11 @@ summary(m_pois)
 
 ## Text color {#sec-summary}
 
+:::{.callout-tip}
 Our format makes applying color on inline text possibly using the `[content]{color=<name>}` syntax. Let's see an example.
-
-:::{.callout}
+:::
 
 Here we are using a special feature of our format which is the coloring because [pink is a **nice** color]{color=mypink}.
-
-:::
 
 ## Using references {.unnumbered}
 
