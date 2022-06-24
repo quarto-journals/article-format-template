@@ -2,6 +2,8 @@
 
 Template for creating a new journal article format for Quarto.
 
+This repository is a [Github Repository Template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) that you should use as a starter to create a new extension format. Click on the "Use this template" button at the top ! 
+
 ## Structure of this repository
 
 Format extension files are in `_extensions`. We are using namespace `quarto-journals` and for this template repo our format will be called `aft`..
