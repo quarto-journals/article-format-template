@@ -1,5 +1,7 @@
 --[[
-  If you extension format needs some special processing, include a Lua filter to be used in addition of Quarto built-in ones.s
+  If you extension format needs some special processing, include a Lua filter to be used in addition of Quarto built-in ones.
+  Quarto exports utils function that can be used in all filters. See 
+  https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/pandoc/datadir/init.lua#L1522-L1576
 ]]--
 
 -- Example: allow to color words by using a span attribute.
