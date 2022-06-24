@@ -21,7 +21,7 @@ author:
     affiliations:
       - Another Affiliation
 abstract: |
-  Only a demo template
+  This document is only a demo explaining how to use the template.
 keywords: [template, demo]
 bibliography: bibliography.bib  
 ---
@@ -36,30 +36,28 @@ This is a dummy example only for the purpose to use this repo as a template star
 If this template is named `template.qmd`, `quarto use template` will allow user to renamed `.qmd` before downloading.
 :::
 
-Everything for the extensions is in `_extensions/aft` folder. See Quarto doc for details. 
+Everything for the extensions is in `_extensions/quarto-journals/aft` folder. See Quarto doc for details. 
 
-- In `partials`, you'll find the `.tex` partials that can be used. 
+- In `partials`, you'll find the `.tex` partials that can be used and should be removed or tweaked,s
 
-- You can have shortcodes available for the format in `shortcodes.lua`
+- Your extension can make shortcodes and lua filters available. This document shows the effect of the one provided in the `aft` format. See Lua filter in `extensions/quarto-journals/aft`
 
-- You can make filter available with the extension in `filter.lua`
+- `aft` format sets some defaults which are different from `pdf` or `html`. See `_extensions/quarto-journals/aft/_extension.yml`
 
-This is example content below of what Quarto can do, including some extensions features
+Source repository for this template format can found on [Github](https://github.com/quarto-journals/article-format-template)
 
-## Math {#sec-math}
 
-We can include nice Math within {{< latex >}} like this equation: 
+## Shortcode demo {#sec-shortcode}
 
-$$
-\log(\mu_i) \quad = \quad x_i^\top \beta,
-$$ {#eq-mean}
-
-where the regression coefficients $\beta$ are estimated by maximum likelihood (ML) using the iterative weighted least squares (IWLS) algorithm.
+PDF are rendered using {{< latex >}} but it is best if one can use a Markdown syntax for cross format support.
 
 ::: callout-tip
 `{{< latex >}}` is a shortcode syntax where the shortcode is included in the extensions `_extensions\quarto-journals`
 :::
 
+## Code chunk {#sec-chunks}
+
+This format hide chunks by default.
 
 ```{r}
 #| prompt: true
@@ -67,41 +65,29 @@ where the regression coefficients $\beta$ are estimated by maximum likelihood (M
 data("quine", package = "MASS")
 ```
 
-Some code chunk where we are changing our default `echo` option to `true`
+But you can set `echo` option to `true`
 
 ```{r}
 #| echo: true
 m_pois <- glm(Days ~ (Eth + Sex + Age + Lrn)^2, data = quine, family = poisson)
 ```
 
-## Summary and discussion {#sec-summary}
+## Text color {#sec-summary}
+
+Our format makes applying color on inline text possibly using the `[content]{color=<name>}` syntax. Let's see an example.
 
 :::{.callout}
 
-Here we are using a special feature of our format which is the coloring because [pink is a **nice** color]{color=mypink}
+Here we are using a special feature of our format which is the coloring because [pink is a **nice** color]{color=mypink}.
 
 :::
 
-## Acknowledgments {.unnumbered}
+## Using references {.unnumbered}
 
-:::{.callout}
-
-We could include some aknowledgment
-
-:::
+I did not read this book [@CameronTrivedi2013] but it must be interesting 
 
 ## References {.unnumbered}
 
 :::{#refs}
-
-:::
-
-{{< pagebreak >}}
-
-## More technical details {#sec-techdetails .unnumbered}
-
-:::{.callout}
-
-Let's add an appendix after our bibliography.
 
 :::
