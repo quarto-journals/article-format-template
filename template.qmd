@@ -60,39 +60,6 @@ where the regression coefficients $\beta$ are estimated by maximum likelihood (M
 `{{< latex >}}` is a shortcode syntax where the shortcode is included in the extensions `_extensions\quarto-journals`
 :::
 
-## Verbatim code chunk
-
-Let's just show a verbatim code chunk which won't be evaluated
-
-```r
-glm(formula, data, subset, na.action, weights, offset,
-  family = gaussian, start = NULL, control = glm.control(…),
-  model = TRUE, y = TRUE, x = FALSE, …)
-```
-
-## Table
-
-| Type           | Distribution | Method   | Description                                                                                                                                                                                  |
-|---------|---------|---------|-----------------------------------------------|
-| GLM            | Poisson      | ML       | Poisson regression: classical GLM, estimated by maximum likelihood (ML)                                                                                                                      |
-|                |              | Quasi    | "Quasi-Poisson regression'': same mean function, estimated by quasi-ML (QML) or equivalently generalized estimating equations (GEE), inference adjustment via estimated dispersion parameter |
-|                |              | Adjusted | "Adjusted Poisson regression'': same mean function, estimated by QML/GEE, inference adjustment via sandwich covariances                                                                      |
-|                | NB           | ML       | NB regression: extended GLM, estimated by ML including additional shape parameter                                                                                                            |
-| Zero-augmented | Poisson      | ML       | Zero-inflated Poisson (ZIP), hurdle Poisson                                                                                                                                                  |
-|                | NB           | ML       | Zero-inflated NB (ZINB), hurdle NB                                                                                                                                                           |
-: Overview of various count regression models. The table is usually placed at the top of the page (`[t!]`), centered (`centering`), has a caption below the table, column headers and captions are in sentence style, and if possible vertical lines should be avoided. {#tbl-overview}
-
-## Illustrations {#sec-illustrations}
-
-We can include some resources provided with our `.qmd` template like a basic frequency distribution of the response variable displayed in
-@fig-quine.
-
-::: {#fig-quine}
-
-![](article-visualization.pdf)
-
-Frequency distribution for number of days absent from school.
-:::
 
 ```{r}
 #| prompt: true
