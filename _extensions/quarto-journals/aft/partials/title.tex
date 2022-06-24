@@ -7,7 +7,13 @@ $-- Customize is needed, otherwise remove this partials to use Quarto default on
 $-- %%%%%%%%%%%%%%%%
 
 $if(title)$
-\title{$title$}
+\title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
 $endif$
-\author{$_custom.tex()$}
+$if(subtitle)$
+$_custom.tex()$
+$endif$
+\subtitle{$subtitle$}
+$endif$
+\author{$for(author)$$author$$sep$ \and $endfor$}
 \date{$date$}
+$endif$

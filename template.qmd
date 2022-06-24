@@ -1,9 +1,9 @@
 ---
 title: "Demo aft format to use as template"
 format:
-    aft-pdf:
-        keep-tex: true  
-    aft-html: default
+  aft-pdf:
+    keep-tex: true  
+  aft-html: default
 author:
   - name: John Doe
     affiliations:
@@ -29,7 +29,11 @@ bibliography: bibliography.bib
 ## Introduction {#sec-intro}
 
 ::: callout-important
-This is a dummy example only for the purpose to use this repo as a template starter for creating new formats.  For this `article-format-template` we call our dummy article `aft`
+This is a dummy example only for the purpose to use this repo as a template starter for creating new formats.  For this `article-format-template` we call our dummy article `aft`. 
+:::
+
+::: callout-tip
+If this template is named `template.qmd`, `quarto use template` will allow user to renamed `.qmd` before downloading.
 :::
 
 Everything for the extensions is in `_extensions/aft` folder. See Quarto doc for details. 
