@@ -95,3 +95,19 @@ Here is the checklist to help you know what to modify:
 - Check `_extension.yml` is updated correctly
 - Modify the skeleton `template.qmd` to your format and add any required resources to be downloaded to user.
 - Check `.quartoignore` is updated which everything that should not be downloaded.
+
+<!-- TO KEEP IN YOUR NEW FORMAT --> 
+
+## Usage
+
+Download the extensions and its template `.qmd` using
+
+````powershell
+quarto use template quarto-journals/article-format-template
+````
+
+Install the extension format only using 
+
+````powershell
+quarto install extension quarto-journals/article-format-template
+````
