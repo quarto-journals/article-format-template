@@ -26,6 +26,10 @@ This template repo contains all the relevant partials that you can use with Quar
 
 > **Only keep the partials that you need to tweak for the format you are creating**
 
+If you need to completely change the default template (i.g customizing partials is not enough), then you need to provide your own template to Pandoc based on [`template.tex`](https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/formats/pdf/pandoc/template.tex) and also using partials or not. This can be provided using the `template` YAML key in `_extension.yml` for Quarto to use it. 
+
+> **This is considered advanced configuration as it will be harder to maintain than only using partials but could be required for some specific format. Be aware that this may lead to loose some Pandoc or Quarto features tied to default `template.tex` content if you remove some specific parts**
+
 #### Lua Filters
 
 Most of the time, custom formats will need Lua filters to provide specific feature like cross format supports or provides custom shortcodes through the Quarto extension mechanism. Those filters will be available to the user and could be used in the custom formats (according to `_extensions` metadata). 
