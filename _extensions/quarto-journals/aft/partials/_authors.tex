@@ -4,11 +4,7 @@ $-- This '_custom.tex' is used on 'title.tex' as example.
 $-- See other existing format in quarto-journals/ organisation.
 $-- %%%% TODO %%%%%
 $-- Use it if you need to insert content at this specific place of the main Pandoc's template. Otherwise, remove it.
+$-- Here we are using it to format the authors part of the template.
 $-- %%%%%%%%%%%%%%%
 
-\usepackage{etoolbox}
-\makeatletter
-\providecommand{\subtitle}[1]{% add subtitle to \maketitle
-  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
-}
-\makeatother
+$it.name.literal$$if(it.orcid)$~\orcidlink{$it.orcid$}$endif$$for(it.affiliations/first)$\\$it.name$$endfor$\\$if(it.email)$\href{mailto:$it.email$}{$it.email$}$endif$

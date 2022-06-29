@@ -22,12 +22,14 @@ contributes:
       fig-height: 4.5
       biblio-style: te.bst
       documentclass: aft
+      # Content to add in header that your format is using
       header-includes: |
+        \usepackage{orcidlink}
         \definecolor{mypink}{RGB}{219, 48, 122}
       template-partials:
         # Add here the partials your format is using
         - "partials/title.tex"
-        - "partials/_custom.tex"
+        - "partials/_authors.tex"
     html:
       # define default configuration for the html version of your format
       number-sections: true
