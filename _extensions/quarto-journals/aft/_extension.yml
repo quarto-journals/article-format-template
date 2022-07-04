@@ -20,7 +20,9 @@ contributes:
       urlcolor: red
       fig-width: 6.5
       fig-height: 4.5
-      biblio-style: te.bst
+      # This format use a bst file with natbib
+      biblio-style: te
+      cite-method: natbib
       documentclass: aft
       # Content to add in header that your format is using
       header-includes: |
