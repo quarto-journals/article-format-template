@@ -30,6 +30,10 @@ contributes:
         # Add here the partials your format is using
         - "partials/title.tex"
         - "partials/_authors.tex"
+      format-resources:
+        # Add here the resources required for the PDF rendering
+        - aft.cls
+        - te.bst
     html:
       # define default configuration for the html version of your format
       number-sections: true
