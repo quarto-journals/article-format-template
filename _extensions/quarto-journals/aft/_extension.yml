@@ -2,7 +2,7 @@ title: Article Format Template
 author: Christophe Dervieux
 version: 0.1.0
 contributes:
-  format:
+  formats:
     common:
       # define below YAML configuration common to all formats
       filters:
