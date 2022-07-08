@@ -6,9 +6,9 @@ This repository is a [Github Repository Template](https://docs.github.com/en/rep
 
 ## Structure of this repository
 
-Format extension files are in `_extensions`. We are using namespace `quarto-journals` and for this template repo our format will be called `aft`..
+Format extension files are in `_extensions` and for this template repo our format will be called `aft`.
 
-### `_extensions\quarto-journals\aft` 
+### `_extensions\aft` 
 
 In this folder you'll find everything that defines the extensions which could be installed using `quarto install extension` or be part of the template when using `quarto use template`
 
