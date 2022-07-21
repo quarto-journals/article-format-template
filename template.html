@@ -131,18 +131,16 @@ div.csl-indent {
   <li><a href="#structure-of-this-repository" id="toc-structure-of-this-repository" class="nav-link" data-scroll-target="#structure-of-this-repository"> <span class="header-section-number">3</span> Structure of this repository</a>
   <ul class="collapse">
   <li><a href="#extensionsaft" id="toc-extensionsaft" class="nav-link" data-scroll-target="#extensionsaft"> <span class="header-section-number">3.1</span> <code>_extensions\aft</code></a></li>
-  <li><a href="#quartoignore" id="toc-quartoignore" class="nav-link" data-scroll-target="#quartoignore"> <span class="header-section-number">3.2</span> <code>.quartoignore</code></a></li>
-  <li><a href="#style-guide-folder" id="toc-style-guide-folder" class="nav-link" data-scroll-target="#style-guide-folder"> <span class="header-section-number">3.3</span> <code>style-guide</code> folder</a></li>
-  <li><a href="#template.qmd" id="toc-template.qmd" class="nav-link" data-scroll-target="#template.qmd"> <span class="header-section-number">3.4</span> <code>template.qmd</code></a></li>
-  <li><a href="#other-files" id="toc-other-files" class="nav-link" data-scroll-target="#other-files"> <span class="header-section-number">3.5</span> Other files</a></li>
   </ul></li>
   <li><a href="#checklist-creating-a-custom-format" id="toc-checklist-creating-a-custom-format" class="nav-link" data-scroll-target="#checklist-creating-a-custom-format"> <span class="header-section-number">4</span> Checklist: Creating a custom format</a></li>
-  <li><a href="#demo-of-some-features-found-in-this-demo-journal-template" id="toc-demo-of-some-features-found-in-this-demo-journal-template" class="nav-link" data-scroll-target="#demo-of-some-features-found-in-this-demo-journal-template"> <span class="header-section-number">5</span> Demo of some features found in this demo journal template</a></li>
-  <li><a href="#sec-shortcode" id="toc-sec-shortcode" class="nav-link" data-scroll-target="#sec-shortcode"> <span class="header-section-number">6</span> Shortcode demo</a></li>
-  <li><a href="#sec-chunks" id="toc-sec-chunks" class="nav-link" data-scroll-target="#sec-chunks"> <span class="header-section-number">7</span> Code chunk</a></li>
-  <li><a href="#sec-summary" id="toc-sec-summary" class="nav-link" data-scroll-target="#sec-summary"> <span class="header-section-number">8</span> Text color</a></li>
+  <li><a href="#demo-of-some-features-found-in-this-demo-journal-template" id="toc-demo-of-some-features-found-in-this-demo-journal-template" class="nav-link" data-scroll-target="#demo-of-some-features-found-in-this-demo-journal-template"> <span class="header-section-number">5</span> Demo of some features found in this demo journal template</a>
+  <ul class="collapse">
+  <li><a href="#sec-shortcode" id="toc-sec-shortcode" class="nav-link" data-scroll-target="#sec-shortcode"> <span class="header-section-number">5.1</span> Shortcode demo</a></li>
+  <li><a href="#sec-chunks" id="toc-sec-chunks" class="nav-link" data-scroll-target="#sec-chunks"> <span class="header-section-number">5.2</span> Code chunk</a></li>
+  <li><a href="#sec-summary" id="toc-sec-summary" class="nav-link" data-scroll-target="#sec-summary"> <span class="header-section-number">5.3</span> Text color</a></li>
   <li><a href="#using-references" id="toc-using-references" class="nav-link" data-scroll-target="#using-references">Using references</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul></li>
   </ul>
 </nav>
 </div>
@@ -219,78 +217,63 @@ div.csl-indent {
 <section id="extensionsaft" class="level3" data-number="3.1">
 <h3 data-number="3.1" class="anchored" data-anchor-id="extensionsaft"><span class="header-section-number">3.1</span> <code>_extensions\aft</code></h3>
 <p>In this folder you’ll find everything that defines the extensions which could be installed using <code>quarto install extension</code> or be part of the template when using <code>quarto use template</code></p>
-<section id="format-metadata" class="level4" data-number="3.1.1">
-<h4 data-number="3.1.1" class="anchored" data-anchor-id="format-metadata"><span class="header-section-number">3.1.1</span> Format Metadata</h4>
-<p>This is in <code>_extension.yml</code> is where all the metadata about the format are defined so that Quarto knows what to use.</p>
-<blockquote class="blockquote">
-<p><strong>Adapt this file for you own template</strong></p>
-</blockquote>
-</section>
-<section id="partials" class="level4" data-number="3.1.2">
-<h4 data-number="3.1.2" class="anchored" data-anchor-id="partials"><span class="header-section-number">3.1.2</span> Partials</h4>
-<p>In <code>partials</code>, there are the <code>.tex</code> files that will be used as Pandoc’s template. We provide here all the partials supported by Quarto and custom one for this format. Quarto allows to provide partials to ease the process of tweaking the default latex Pandoc’s template and keeping it up to date.</p>
-<p>This template repo contains all the relevant partials that you can use with Quarto <em>as example</em>. We only tweaked <code>title.tex</code> to show the usage of a custom partials called <code>_custom.tex</code></p>
-<blockquote class="blockquote">
-<p><strong>Only keep the partials that you need to tweak for the format you are creating</strong></p>
-</blockquote>
+<dl>
+<dt>Format Metadata</dt>
+<dd>
+This is in <code>_extension.yml</code> is where all the metadata about the format are defined so that Quarto knows what to use. Adapt this file for you own template.
+</dd>
+<dt>Partials</dt>
+<dd>
+<p>In <code>partials</code>, there are the <code>.tex</code> files that will be used as Pandoc’s template. We provide here all the partials supported by Quarto and custom one for this format. Quarto allows to provide partials to ease the process of tweaking the default latex Pandoc’s template and keeping it up to date.<br>
+This template repo contains all the relevant partials that you can use with Quarto <em>as example</em>. We only tweaked <code>title.tex</code> to show the usage of a custom partials called <code>_custom.tex</code>.<br>
+<strong>Only keep the partials that you need to tweak for the format you are creating</strong></p>
 <p>If you need to completely change the default template (i.g customizing partials is not enough), then you need to provide your own template to Pandoc based on <a href="https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/formats/pdf/pandoc/template.tex"><code>template.tex</code></a> and also using partials or not. This can be provided using the <code>template</code> YAML key in <code>_extension.yml</code> for Quarto to use it.</p>
-<blockquote class="blockquote">
-<p><strong>This is considered advanced configuration as it will be harder to maintain than only using partials but could be required for some specific format. Be aware that this may lead to loose some Pandoc or Quarto features tied to default <code>template.tex</code> content if you remove some specific parts</strong></p>
-</blockquote>
-</section>
-<section id="lua-filters" class="level4" data-number="3.1.3">
-<h4 data-number="3.1.3" class="anchored" data-anchor-id="lua-filters"><span class="header-section-number">3.1.3</span> Lua Filters</h4>
-<p>Most of the time, custom formats will need Lua filters to provide specific feature like cross format supports or provides custom shortcodes through the Quarto extension mechanism. Those filters will be available to the user and could be used in the custom formats (according to <code>_extensions</code> metadata).</p>
-<p>We have provided two examples:</p>
-<pre><code>- `color-text.lua`, a Lua filter used to add color to inline text for PDF and HTML outputs using the same Markdown syntax
-- `shorcodes.lua`, a Lua filter which follow [Quarto custom shortcodes](https://quarto.org/docs/authoring/shortcodes.html#custom-shortcodes) guidelines to provide a `{{&lt; LaTeX &gt;}}` shortcode to nicely print LaTeX in PDF and HTML. </code></pre>
-<blockquote class="blockquote">
+<p>This is considered advanced configuration as it will be harder to maintain than only using partials but could be required for some specific format. Be aware that this may lead to loose some Pandoc or Quarto features tied to default <code>template.tex</code> content if you remove some specific parts.</p>
+</dd>
+<dt>Lua Filters</dt>
+<dd>
+<p>Most of the time, custom formats will need Lua filters to provide specific features like cross format supports or provides custom shortcodes through the Quarto extension mechanism. Those filters will be available to the user and could be used in the custom formats (according to <code>_extensions</code> metadata). We have provided two examples:</p>
+<ul>
+<li><code>color-text.lua</code>, a Lua filter used to add color to inline text for PDF and HTML outputs using the same Markdown syntax</li>
+<li><code>shorcodes.lua</code>, a Lua filter which follow <a href="https://quarto.org/docs/authoring/shortcodes.html#custom-shortcodes">Quarto custom shortcodes</a> guidelines to provide a <code>{{&lt; LaTeX &gt;}}</code> shortcode to nicely print LaTeX in PDF and HTML.</li>
+</ul>
 <p><strong>Remove or replace with your own Lua filters</strong></p>
-</blockquote>
-</section>
-<section id="format-resources" class="level4" data-number="3.1.4">
-<h4 data-number="3.1.4" class="anchored" data-anchor-id="format-resources"><span class="header-section-number">3.1.4</span> Format resources</h4>
+</dd>
+<dt>Format resources</dt>
+<dd>
 <p>Resources required by the format needs to be available. We have provided two examples:</p>
 <ul>
-<li><p><code>te.bst</code> is a biblio style file for demo. It has been downloaded from https://www.economics.utoronto.ca/osborne/latex/TEBST.HTM (http://econtheory.org/technical/te.bst) - Licence <a href="https://www.latex-project.org/lppl/">LPPL</a></p></li>
-<li><p><code>aft.cls</code> is a dummy class file for this example format. It is a copy of official <code>article.cls</code>, the one provided in LaTeX installation (i.e at <code>kpsewhich article.cls</code>) and renamed as example (Licence LaTeX Project Public License)</p></li>
-<li><p><code>custom.scss</code> is a style file to have a custom theme for our HTML format so that our Lua filter feature <code>color-tex.lua</code> works.</p></li>
+<li><code>te.bst</code> is a biblio style file for demo. It has been downloaded from https://www.economics.utoronto.ca/osborne/latex/TEBST.HTM (http://econtheory.org/technical/te.bst) - Licence <a href="https://www.latex-project.org/lppl/">LPPL</a></li>
+<li><code>aft.cls</code> is a dummy class file for this example format. It is a copy of official <code>article.cls</code>, the one provided in LaTeX installation (i.e at <code>kpsewhich article.cls</code>) and renamed as example (Licence LaTeX Project Public License)</li>
+<li><code>custom.scss</code> is a style file to have a custom theme for our HTML format so that our Lua filter feature <code>color-tex.lua</code> works.</li>
 </ul>
 <p>Those files are referenced within the <code>_extension.yml</code> to be used with our example format.</p>
-<blockquote class="blockquote">
 <p><strong>Remove and replace with your own resources</strong></p>
-</blockquote>
-</section>
-</section>
-<section id="quartoignore" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="quartoignore"><span class="header-section-number">3.2</span> <code>.quartoignore</code></h3>
+</dd>
+<dt><code>.quartoignore</code></dt>
+<dd>
 <p>Sometimes it is useful to have some files only needed for reference or for development. They should be available in the source repository but not downloaded to the user when <code>quarto use template</code> is used.</p>
-<blockquote class="blockquote">
 <p><strong>Use <code>.quartoignore</code> to register such file and folder (one file or folder per line)</strong></p>
-</blockquote>
-</section>
-<section id="style-guide-folder" class="level3" data-number="3.3">
-<h3 data-number="3.3" class="anchored" data-anchor-id="style-guide-folder"><span class="header-section-number">3.3</span> <code>style-guide</code> folder</h3>
+</dd>
+<dt><code>style-guide</code> folder</dt>
+<dd>
 <p>For <code>quarto-journals</code> format, use <code>style-guide</code> folder to include any documentation and resourced used for format creation, like a journal style guide or original <code>.tex</code> template. This folder is already added in <code>.quartoignore</code> in this example repo.</p>
-<blockquote class="blockquote">
 <p><strong>Remove, rename or add to this folder</strong></p>
-</blockquote>
-</section>
-<section id="template.qmd" class="level3" data-number="3.4">
-<h3 data-number="3.4" class="anchored" data-anchor-id="template.qmd"><span class="header-section-number">3.4</span> <code>template.qmd</code></h3>
+</dd>
+<dt><code>template.qmd</code></dt>
+<dd>
 <p>This file is the template document that shows how to use the custom format. It will be downloaded with other resource by <code>quarto use template</code>, and even offered to be renamed if the name <code>template.qmd</code> is used.</p>
 <p>This file will usually use the custom format (here <code>aft-pdf</code> and <code>aft-html</code>) and show how to use the template. When you’ll copy this template, you should be able to render this document to the demo format.</p>
-<blockquote class="blockquote">
 <p><strong>Adapt this file to provide a suitable template for your custom format</strong></p>
-</blockquote>
-</section>
-<section id="other-files" class="level3" data-number="3.5">
-<h3 data-number="3.5" class="anchored" data-anchor-id="other-files"><span class="header-section-number">3.5</span> Other files</h3>
+</dd>
+<dt>Other files</dt>
+<dd>
 <p>Other files are needed by the template and are usually user provided - they are not part of the custom format.</p>
 <p>Here <code>bibliography.bib</code> is here to demo the usage of the bst file from the custom format.</p>
-<blockquote class="blockquote">
 <p><strong>Remove this file and provide a suitable one for your template</strong></p>
-</blockquote>
+</dd>
+</dl>
+<div style="page-break-after: always;"></div>
 </section>
 </section>
 <section id="checklist-creating-a-custom-format" class="level2" data-number="4">
@@ -312,22 +295,21 @@ div.csl-indent {
 </section>
 <section id="demo-of-some-features-found-in-this-demo-journal-template" class="level2" data-number="5">
 <h2 data-number="5" class="anchored" data-anchor-id="demo-of-some-features-found-in-this-demo-journal-template"><span class="header-section-number">5</span> Demo of some features found in this demo journal template</h2>
-</section>
-<section id="sec-shortcode" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="sec-shortcode"><span class="header-section-number">6</span> Shortcode demo</h2>
+<section id="sec-shortcode" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="sec-shortcode"><span class="header-section-number">5.1</span> Shortcode demo</h3>
 <p>PDF are rendered using <span class="math inline">\(\LaTeX\)</span> but it is best if one can use a Markdown syntax for cross format support.</p>
 <p><code>\LaTeX</code> used in source is a shortcode syntax where the shortcode is included in the extension folder <code>_extensions</code></p>
 </section>
-<section id="sec-chunks" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="sec-chunks"><span class="header-section-number">7</span> Code chunk</h2>
+<section id="sec-chunks" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="sec-chunks"><span class="header-section-number">5.2</span> Code chunk</h3>
 <p>This format hide chunks by default as option has been set in <code>_extension.yml</code> file.</p>
 <div class="cell">
 
 </div>
 <p>But you can set <code>echo</code> option to <code>true</code> locally in the chunk</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>m_pois <span class="ot">&lt;-</span> <span class="fu">glm</span>(Days <span class="sc">~</span> (Eth <span class="sc">+</span> Sex <span class="sc">+</span> Age <span class="sc">+</span> Lrn)<span class="sc">^</span><span class="dv">2</span>, <span class="at">data =</span> quine, <span class="at">family =</span> poisson)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m_pois)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>m_pois <span class="ot">&lt;-</span> <span class="fu">glm</span>(Days <span class="sc">~</span> (Eth <span class="sc">+</span> Sex <span class="sc">+</span> Age <span class="sc">+</span> Lrn)<span class="sc">^</span><span class="dv">2</span>, <span class="at">data =</span> quine, <span class="at">family =</span> poisson)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m_pois)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -372,23 +354,24 @@ Number of Fisher Scoring iterations: 5</code></pre>
 </div>
 </div>
 </section>
-<section id="sec-summary" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="sec-summary"><span class="header-section-number">8</span> Text color</h2>
+<section id="sec-summary" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="sec-summary"><span class="header-section-number">5.3</span> Text color</h3>
 <p>Our format makes applying color on inline text possible using the <code>[content]{color=&lt;name&gt;}</code> syntax. Let’s see an example.</p>
 <p>Here we are using a special feature of our format which is the coloring because <span class="color-mypink">pink is a <strong>nice</strong> color</span>.</p>
 <p>This is possible thanks to the Lua Filter included in the custom extension format.</p>
 </section>
-<section id="using-references" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="using-references">Using references</h2>
+<section id="using-references" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="using-references">Using references</h3>
 <p>I did not read this book <span class="citation" data-cites="CameronTrivedi2013">(<a href="#ref-CameronTrivedi2013" role="doc-biblioref">Cameron and Trivedi, 2013</a>)</span> but it must be interesting</p>
 </section>
-<section id="references" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
+<section id="references" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="references">References</h3>
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
 <div id="ref-CameronTrivedi2013" class="csl-entry" role="doc-biblioentry">
 Cameron, A.C., and P.K. Trivedi (2013), <em>Regression analysis of count data</em>, 2nd ed., Cambridge University Press, Cambridge.
 </div>
 </div>
+</section>
 </section>
 
 </main>
