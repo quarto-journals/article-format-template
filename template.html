@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.35">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="John Doe">
+<meta name="author" content="his friend">
+<meta name="keywords" content="template, demo">
+
+<title>Demo aft format to use as template</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="template_files/libs/clipboard/clipboard.min.js"></script>
+<script src="template_files/libs/quarto-html/quarto.js"></script>
+<script src="template_files/libs/quarto-html/popper.min.js"></script>
+<script src="template_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="template_files/libs/quarto-html/anchor.min.js"></script>
+<link href="template_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="template_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="template_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="template_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="template_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#sec-intro" id="toc-sec-intro" class="nav-link active" data-scroll-target="#sec-intro"> <span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#about-quarto-extensions-formats-and-quarto-journals-article" id="toc-about-quarto-extensions-formats-and-quarto-journals-article" class="nav-link" data-scroll-target="#about-quarto-extensions-formats-and-quarto-journals-article"> <span class="header-section-number">2</span> About Quarto Extensions formats And Quarto Journals Article</a></li>
+  <li><a href="#structure-of-this-repository" id="toc-structure-of-this-repository" class="nav-link" data-scroll-target="#structure-of-this-repository"> <span class="header-section-number">3</span> Structure of this repository</a>
+  <ul class="collapse">
+  <li><a href="#extensionsaft" id="toc-extensionsaft" class="nav-link" data-scroll-target="#extensionsaft"> <span class="header-section-number">3.1</span> <code>_extensions\aft</code></a></li>
+  <li><a href="#quartoignore" id="toc-quartoignore" class="nav-link" data-scroll-target="#quartoignore"> <span class="header-section-number">3.2</span> <code>.quartoignore</code></a></li>
+  <li><a href="#style-guide-folder" id="toc-style-guide-folder" class="nav-link" data-scroll-target="#style-guide-folder"> <span class="header-section-number">3.3</span> <code>style-guide</code> folder</a></li>
+  <li><a href="#template.qmd" id="toc-template.qmd" class="nav-link" data-scroll-target="#template.qmd"> <span class="header-section-number">3.4</span> <code>template.qmd</code></a></li>
+  <li><a href="#other-files" id="toc-other-files" class="nav-link" data-scroll-target="#other-files"> <span class="header-section-number">3.5</span> Other files</a></li>
+  </ul></li>
+  <li><a href="#checklist-creating-a-custom-format" id="toc-checklist-creating-a-custom-format" class="nav-link" data-scroll-target="#checklist-creating-a-custom-format"> <span class="header-section-number">4</span> Checklist: Creating a custom format</a></li>
+  <li><a href="#demo-of-some-features-found-in-this-demo-journal-template" id="toc-demo-of-some-features-found-in-this-demo-journal-template" class="nav-link" data-scroll-target="#demo-of-some-features-found-in-this-demo-journal-template"> <span class="header-section-number">5</span> Demo of some features found in this demo journal template</a></li>
+  <li><a href="#sec-shortcode" id="toc-sec-shortcode" class="nav-link" data-scroll-target="#sec-shortcode"> <span class="header-section-number">6</span> Shortcode demo</a></li>
+  <li><a href="#sec-chunks" id="toc-sec-chunks" class="nav-link" data-scroll-target="#sec-chunks"> <span class="header-section-number">7</span> Code chunk</a></li>
+  <li><a href="#sec-summary" id="toc-sec-summary" class="nav-link" data-scroll-target="#sec-summary"> <span class="header-section-number">8</span> Text color</a></li>
+  <li><a href="#using-references" id="toc-using-references" class="nav-link" data-scroll-target="#using-references">Using references</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Demo aft format to use as template</h1>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Authors</div>
+  <div class="quarto-title-meta-heading">Affiliations</div>
+  
+    <div class="quarto-title-meta-contents">
+    <a href="https://example.org/">John Doe</a> <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Dummy org
+          </p>
+        <p class="affiliation">
+            Demo Journal
+          </p>
+      </div>
+      <div class="quarto-title-meta-contents">
+    his friend 
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Another Affiliation
+          </p>
+      </div>
+    </div>
+
+<div class="quarto-title-meta">
+
+      
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="abstract-title">Abstract</div>
+    <p>This document is only a demo explaining how to use the template.</p>
+  </div>
+</div>
+
+</header>
+
+<section id="sec-intro" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="sec-intro"><span class="header-section-number">1</span> Introduction</h2>
+<p>This is a dummy example only for the purpose to use this repo as a template starter for creating new formats. For this <code>article-format-template</code> we call our dummy article <code>aft</code>.</p>
+<p>This quarto extension format supports PDF and HTML outputs. <code>quarto-journals</code> is aiming at porting existing <span class="math inline">\(\LaTeX\)</span> template from journals to be used with quarto. PDF format is what require the most work to fit the journals guideline, but Quarto offer a nice rendering for HTML output too. This demo format template only use basic HTML format without any customization for now.</p>
+</section>
+<section id="about-quarto-extensions-formats-and-quarto-journals-article" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="about-quarto-extensions-formats-and-quarto-journals-article"><span class="header-section-number">2</span> About Quarto Extensions formats And Quarto Journals Article</h2>
+<p>First, please get familiar with the following resources:</p>
+<ul>
+<li><a href="https://quarto.org/docs/extensions/formats.html">Creating Formats</a> in Quarto as part of the <a href="https://quarto.org/docs/extensions/">Extensions</a> mechanism.</li>
+<li><a href="https://quarto.org/docs/journals/">Journals Articles</a> for Quarto.</li>
+</ul>
+</section>
+<section id="structure-of-this-repository" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="structure-of-this-repository"><span class="header-section-number">3</span> Structure of this repository</h2>
+<p>Everything for the extensions is in <code>_extensions</code>. See Quarto doc for details.</p>
+<ul>
+<li><p>In <code>partials</code>, you’ll find the <code>.tex</code> partials that can be used and should be removed or tweaked,s</p></li>
+<li><p>Your extension can make shortcodes and lua filters available. This document shows the effect of the one provided in the <code>aft</code> format.</p></li>
+<li><p><code>aft</code> format sets some defaults which are different from <code>pdf</code> or <code>html</code>, link setting links to URL in read inside PDF output.</p></li>
+</ul>
+<p>Source repository for this template format can found on <a href="https://github.com/quarto-journals/article-format-template">Github</a></p>
+<section id="extensionsaft" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="extensionsaft"><span class="header-section-number">3.1</span> <code>_extensions\aft</code></h3>
+<p>In this folder you’ll find everything that defines the extensions which could be installed using <code>quarto install extension</code> or be part of the template when using <code>quarto use template</code></p>
+<section id="format-metadata" class="level4" data-number="3.1.1">
+<h4 data-number="3.1.1" class="anchored" data-anchor-id="format-metadata"><span class="header-section-number">3.1.1</span> Format Metadata</h4>
+<p>This is in <code>_extension.yml</code> is where all the metadata about the format are defined so that Quarto knows what to use.</p>
+<blockquote class="blockquote">
+<p><strong>Adapt this file for you own template</strong></p>
+</blockquote>
+</section>
+<section id="partials" class="level4" data-number="3.1.2">
+<h4 data-number="3.1.2" class="anchored" data-anchor-id="partials"><span class="header-section-number">3.1.2</span> Partials</h4>
+<p>In <code>partials</code>, there are the <code>.tex</code> files that will be used as Pandoc’s template. We provide here all the partials supported by Quarto and custom one for this format. Quarto allows to provide partials to ease the process of tweaking the default latex Pandoc’s template and keeping it up to date.</p>
+<p>This template repo contains all the relevant partials that you can use with Quarto <em>as example</em>. We only tweaked <code>title.tex</code> to show the usage of a custom partials called <code>_custom.tex</code></p>
+<blockquote class="blockquote">
+<p><strong>Only keep the partials that you need to tweak for the format you are creating</strong></p>
+</blockquote>
+<p>If you need to completely change the default template (i.g customizing partials is not enough), then you need to provide your own template to Pandoc based on <a href="https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/formats/pdf/pandoc/template.tex"><code>template.tex</code></a> and also using partials or not. This can be provided using the <code>template</code> YAML key in <code>_extension.yml</code> for Quarto to use it.</p>
+<blockquote class="blockquote">
+<p><strong>This is considered advanced configuration as it will be harder to maintain than only using partials but could be required for some specific format. Be aware that this may lead to loose some Pandoc or Quarto features tied to default <code>template.tex</code> content if you remove some specific parts</strong></p>
+</blockquote>
+</section>
+<section id="lua-filters" class="level4" data-number="3.1.3">
+<h4 data-number="3.1.3" class="anchored" data-anchor-id="lua-filters"><span class="header-section-number">3.1.3</span> Lua Filters</h4>
+<p>Most of the time, custom formats will need Lua filters to provide specific feature like cross format supports or provides custom shortcodes through the Quarto extension mechanism. Those filters will be available to the user and could be used in the custom formats (according to <code>_extensions</code> metadata).</p>
+<p>We have provided two examples:</p>
+<pre><code>- `color-text.lua`, a Lua filter used to add color to inline text for PDF and HTML outputs using the same Markdown syntax
+- `shorcodes.lua`, a Lua filter which follow [Quarto custom shortcodes](https://quarto.org/docs/authoring/shortcodes.html#custom-shortcodes) guidelines to provide a `{{&lt; LaTeX &gt;}}` shortcode to nicely print LaTeX in PDF and HTML. </code></pre>
+<blockquote class="blockquote">
+<p><strong>Remove or replace with your own Lua filters</strong></p>
+</blockquote>
+</section>
+<section id="format-resources" class="level4" data-number="3.1.4">
+<h4 data-number="3.1.4" class="anchored" data-anchor-id="format-resources"><span class="header-section-number">3.1.4</span> Format resources</h4>
+<p>Resources required by the format needs to be available. We have provided two examples:</p>
+<ul>
+<li><p><code>te.bst</code> is a biblio style file for demo. It has been downloaded from https://www.economics.utoronto.ca/osborne/latex/TEBST.HTM (http://econtheory.org/technical/te.bst) - Licence <a href="https://www.latex-project.org/lppl/">LPPL</a></p></li>
+<li><p><code>aft.cls</code> is a dummy class file for this example format. It is a copy of official <code>article.cls</code>, the one provided in LaTeX installation (i.e at <code>kpsewhich article.cls</code>) and renamed as example (Licence LaTeX Project Public License)</p></li>
+<li><p><code>custom.scss</code> is a style file to have a custom theme for our HTML format so that our Lua filter feature <code>color-tex.lua</code> works.</p></li>
+</ul>
+<p>Those files are referenced within the <code>_extension.yml</code> to be used with our example format.</p>
+<blockquote class="blockquote">
+<p><strong>Remove and replace with your own resources</strong></p>
+</blockquote>
+</section>
+</section>
+<section id="quartoignore" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="quartoignore"><span class="header-section-number">3.2</span> <code>.quartoignore</code></h3>
+<p>Sometimes it is useful to have some files only needed for reference or for development. They should be available in the source repository but not downloaded to the user when <code>quarto use template</code> is used.</p>
+<blockquote class="blockquote">
+<p><strong>Use <code>.quartoignore</code> to register such file and folder (one file or folder per line)</strong></p>
+</blockquote>
+</section>
+<section id="style-guide-folder" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="style-guide-folder"><span class="header-section-number">3.3</span> <code>style-guide</code> folder</h3>
+<p>For <code>quarto-journals</code> format, use <code>style-guide</code> folder to include any documentation and resourced used for format creation, like a journal style guide or original <code>.tex</code> template. This folder is already added in <code>.quartoignore</code> in this example repo.</p>
+<blockquote class="blockquote">
+<p><strong>Remove, rename or add to this folder</strong></p>
+</blockquote>
+</section>
+<section id="template.qmd" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="template.qmd"><span class="header-section-number">3.4</span> <code>template.qmd</code></h3>
+<p>This file is the template document that shows how to use the custom format. It will be downloaded with other resource by <code>quarto use template</code>, and even offered to be renamed if the name <code>template.qmd</code> is used.</p>
+<p>This file will usually use the custom format (here <code>aft-pdf</code> and <code>aft-html</code>) and show how to use the template. When you’ll copy this template, you should be able to render this document to the demo format.</p>
+<blockquote class="blockquote">
+<p><strong>Adapt this file to provide a suitable template for your custom format</strong></p>
+</blockquote>
+</section>
+<section id="other-files" class="level3" data-number="3.5">
+<h3 data-number="3.5" class="anchored" data-anchor-id="other-files"><span class="header-section-number">3.5</span> Other files</h3>
+<p>Other files are needed by the template and are usually user provided - they are not part of the custom format.</p>
+<p>Here <code>bibliography.bib</code> is here to demo the usage of the bst file from the custom format.</p>
+<blockquote class="blockquote">
+<p><strong>Remove this file and provide a suitable one for your template</strong></p>
+</blockquote>
+</section>
+</section>
+<section id="checklist-creating-a-custom-format" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="checklist-creating-a-custom-format"><span class="header-section-number">4</span> Checklist: Creating a custom format</h2>
+<p>Here is the checklist to help you know what to modify:</p>
+<ul>
+<li>Read the resources mentioned at the top,</li>
+<li>Use this template repo to create a new repository for your format (Click on “Use this template” to create new github repo)</li>
+<li>Once you are acquainted with the content, remove the resources that are there only as example (see above)</li>
+<li>Update README by replacing <code>aft</code> and <code>Article Format Template</code> mentions for your journal format</li>
+<li>Keep only the template partials that you need to tweak, and add custom ones if needed</li>
+<li>Add any Lua filters for shortcodes and other that would be useful to create the expected output format</li>
+<li>Add any external resource your format will need, and that should be part of the extension format that will be downloaded,</li>
+<li>Check <code>_extension.yml</code> is updated correctly</li>
+<li>Modify the skeleton <code>template.qmd</code> to your format and add any required resources to be downloaded to user.</li>
+<li>Check <code>.quartoignore</code> is updated which everything that should not be downloaded.</li>
+<li>Publish a demo of you format to github pages of the repo by using <code>quarto publish</code> command</li>
+</ul>
+</section>
+<section id="demo-of-some-features-found-in-this-demo-journal-template" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="demo-of-some-features-found-in-this-demo-journal-template"><span class="header-section-number">5</span> Demo of some features found in this demo journal template</h2>
+</section>
+<section id="sec-shortcode" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="sec-shortcode"><span class="header-section-number">6</span> Shortcode demo</h2>
+<p>PDF are rendered using <span class="math inline">\(\LaTeX\)</span> but it is best if one can use a Markdown syntax for cross format support.</p>
+<p><code>\LaTeX</code> used in source is a shortcode syntax where the shortcode is included in the extension folder <code>_extensions</code></p>
+</section>
+<section id="sec-chunks" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="sec-chunks"><span class="header-section-number">7</span> Code chunk</h2>
+<p>This format hide chunks by default as option has been set in <code>_extension.yml</code> file.</p>
+<div class="cell">
+
+</div>
+<p>But you can set <code>echo</code> option to <code>true</code> locally in the chunk</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>m_pois <span class="ot">&lt;-</span> <span class="fu">glm</span>(Days <span class="sc">~</span> (Eth <span class="sc">+</span> Sex <span class="sc">+</span> Age <span class="sc">+</span> Lrn)<span class="sc">^</span><span class="dv">2</span>, <span class="at">data =</span> quine, <span class="at">family =</span> poisson)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m_pois)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = Days ~ (Eth + Sex + Age + Lrn)^2, family = poisson, 
+    data = quine)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-7.6533  -2.7796  -0.5301   1.5749   8.1955  
+
+Coefficients: (1 not defined because of singularities)
+            Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)  2.93246    0.09826  29.843  &lt; 2e-16 ***
+EthN        -0.17399    0.12134  -1.434   0.1516    
+SexM        -0.71452    0.12229  -5.843 5.14e-09 ***
+AgeF1       -0.04270    0.12691  -0.336   0.7365    
+AgeF2       -0.08632    0.16164  -0.534   0.5933    
+AgeF3       -0.15290    0.11898  -1.285   0.1987    
+LrnSL        0.21608    0.14558   1.484   0.1377    
+EthN:SexM    0.43902    0.09208   4.768 1.86e-06 ***
+EthN:AgeF1  -0.92889    0.14657  -6.337 2.34e-10 ***
+EthN:AgeF2  -1.33398    0.13504  -9.879  &lt; 2e-16 ***
+EthN:AgeF3  -0.11242    0.13478  -0.834   0.4042    
+EthN:LrnSL   0.26415    0.11378   2.322   0.0203 *  
+SexM:AgeF1  -0.05565    0.16303  -0.341   0.7328    
+SexM:AgeF2   1.09942    0.15281   7.195 6.26e-13 ***
+SexM:AgeF3   1.15949    0.13859   8.366  &lt; 2e-16 ***
+SexM:LrnSL   0.04143    0.13718   0.302   0.7627    
+AgeF1:LrnSL -0.13019    0.15688  -0.830   0.4066    
+AgeF2:LrnSL  0.37340    0.14563   2.564   0.0103 *  
+AgeF3:LrnSL       NA         NA      NA       NA    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for poisson family taken to be 1)
+
+    Null deviance: 2073.5  on 145  degrees of freedom
+Residual deviance: 1368.7  on 128  degrees of freedom
+AIC: 1993.1
+
+Number of Fisher Scoring iterations: 5</code></pre>
+</div>
+</div>
+</section>
+<section id="sec-summary" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="sec-summary"><span class="header-section-number">8</span> Text color</h2>
+<p>Our format makes applying color on inline text possible using the <code>[content]{color=&lt;name&gt;}</code> syntax. Let’s see an example.</p>
+<p>Here we are using a special feature of our format which is the coloring because <span class="color-mypink">pink is a <strong>nice</strong> color</span>.</p>
+<p>This is possible thanks to the Lua Filter included in the custom extension format.</p>
+</section>
+<section id="using-references" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="using-references">Using references</h2>
+<p>I did not read this book <span class="citation" data-cites="CameronTrivedi2013">(<a href="#ref-CameronTrivedi2013" role="doc-biblioref">Cameron and Trivedi, 2013</a>)</span> but it must be interesting</p>
+</section>
+<section id="references" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-CameronTrivedi2013" class="csl-entry" role="doc-biblioentry">
+Cameron, A.C., and P.K. Trivedi (2013), <em>Regression analysis of count data</em>, 2nd ed., Cambridge University Press, Cambridge.
+</div>
+</div>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
