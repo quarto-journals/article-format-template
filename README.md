@@ -15,7 +15,9 @@ This is a Quarto template that assists you in creating a manuscript for Article 
 
 You can use this as a template to create an article for an AFT journal. To do this, use the following command:
 
-```quarto use template quarto-journals/article-format-template```
+```bash
+quarto use template quarto-journals/article-format-template
+```
 
 This will install the extension and create an example qmd file and bibiography that you can use as a starting place for your article.
 
@@ -23,13 +25,17 @@ This will install the extension and create an example qmd file and bibiography t
 
 You may also use this format with an existing Quarto project or document. From the quarto project or document directory, run the following command to install this format:
 
-```quarto install extension quarto-journals/article-format-template```
+```bash
+quarto install extension quarto-journals/article-format-template
+```
 
-## Usage 
+## Usage
 
 To use the format, you can use the format names `aft-pdf` and `aft-html`. For example:
 
-```quarto render article.qmd --to aft-pdf```
+```bash
+quarto render article.qmd --to aft-pdf
+```
 
 or in your document yaml
 
