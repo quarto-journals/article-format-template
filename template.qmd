@@ -23,6 +23,7 @@ author:
 abstract: |
   This document is only a demo explaining how to use the template.
 keywords: [template, demo]
+reference-section-title: References
 bibliography: bibliography.bib  
 ---
 
@@ -172,10 +173,9 @@ This is possible thanks to the Lua Filter included in the custom extension forma
 
 ### Using references {.unnumbered}
 
-I did not read this book [@CameronTrivedi2013] but it must be interesting 
+I did not read this book [@CameronTrivedi2013] but it must be interesting. 
 
-### References {.unnumbered}
+Differences between `aft-html` and `aft-pdf`: 
 
-:::{#refs}
-
-:::
+* For the HTML format, we are using Pandoc citeproc to include the bibliography. Here `reference-section-title` controls the title for the chapter that will be used.
+* For the PDF format, `natbib` is used by default and the bibliography is included with a title by the LaTeX template. 
