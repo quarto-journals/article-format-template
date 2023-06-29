@@ -26,7 +26,7 @@ This will install the extension and create an example qmd file and bibiography t
 You may also use this format with an existing Quarto project or document. From the quarto project or document directory, run the following command to install this format:
 
 ```bash
-quarto install extension quarto-journals/article-format-template
+quarto add quarto-journals/article-format-template
 ```
 
 ## Usage
