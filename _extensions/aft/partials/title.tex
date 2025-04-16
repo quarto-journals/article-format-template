@@ -18,5 +18,6 @@ $if(subtitle)$
 \makeatother
 \subtitle{$subtitle$}
 $endif$
-\author{${ by-author:_authors.tex()[\and ] }}
+$-- This supports Quarto's authors normalization
+\author{$for(authors)$$it.name.literal$$sep$ \and $endfor$}
 \date{$date$}

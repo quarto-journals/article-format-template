@@ -1,10 +1,11 @@
 
-$-- This includes configuration for text highlighting, tables, graphics, tight lists, citations, and header includes.
-$-- In general, this partial will not be included in your custom template, unless you may know that certain capabilities will not be needed, s
-$-- so you can tweak this partial to its included partials usage that are not needed
+$-- This includes various configurations directly or through other partials.
+$-- In general, this partial will not be included in your custom template, unless you may know that certain capabilities will not be needed,
+$-- so you can tweak this partial to remove one of the included partial usage that is not needed
 
 $-- %%%% TODO %%%%%
-$-- Customize is needed, otherwise remove this partials to use Quarto default one
+$-- Customize is needed, otherwise remove this partials to use Quarto default one.
+$-- Customize one of the called partial directly instead to tweak a specific feature
 $-- %%%%%%%%%%%%%%%%
 
 $-- Required to use Pandoc highlighting feature
@@ -12,16 +13,87 @@ $if(highlighting-macros)$
 $highlighting-macros$
 $endif$
 
-$-- Provides the tight list command required for Pandoc lists feature
-$tightlist.tex()$
-$-- Provides configuration for the output of tables, table captioning, and footnotes within tables.
 $tables.tex()$
-$-- Provides image scaling and placement configuration.
 $graphics.tex()$
-$-- When using CSL references, provides configuration and commands for outputing the bibliography.
+$if(svg)$
+\usepackage{svg}
+$endif$
+
+$--
+$-- strikeout/underline
+$--
+$if(strikeout)$
+\ifLuaTeX
+  \usepackage{luacolor}
+  \usepackage[soul]{lua-ul}
+\else
+  \usepackage{soul}
+$if(beamer)$
+  \makeatletter
+  \let\HL\hl
+  \renewcommand\hl{% fix for beamer highlighting
+    \let\set@color\beamerorig@set@color
+    \let\reset@color\beamerorig@reset@color
+    \HL}
+  \makeatother
+$endif$
+$if(CJKmainfont)$
+  \ifXeTeX
+    % soul's \st doesn't work for CJK:
+    \usepackage{xeCJKfntef}
+    \renewcommand{\st}[1]{\sout{#1}}
+  \fi
+$endif$
+\fi
+$endif$
+
 $citations.tex()$
 
-$-- Required for inclusion of includes in header
+$babel-lang.tex()$
+
+$--
+$-- pagestyle
+$--
+$if(pagestyle)$
+\pagestyle{$pagestyle$}
+$endif$
+
+$--
+$-- prevent overfull lines
+$--
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+$tightlist.tex()$
+
+$--
+$-- subfigure support
+$--
+$if(subfigure)$
+\usepackage{subcaption}
+$endif$
+
+$--
+$-- text direction support for pdftex
+$--
+$if(dir)$
+\ifPDFTeX
+  \TeXXeTstate=1
+  \newcommand{\RL}[1]{\beginR #1\endR}
+  \newcommand{\LR}[1]{\beginL #1\endL}
+  \newenvironment{RTL}{\beginR}{\endR}
+  \newenvironment{LTR}{\beginL}{\endL}
+\fi
+$endif$
+
+$biblio-config.tex()$
+
+$--
+$-- csquotes
+$--
+$if(csquotes)$
+\usepackage[$for(csquotesoptions)$$csquotesoptions$$sep$,$endfor$]{csquotes}
+$endif$
+
 $for(header-includes)$
 $header-includes$
 $endfor$
