@@ -1,0 +1,21 @@
+$-- Implements bibliography support support for natbib and biblatex
+$--
+$-- %%%% TODO %%%%%
+$-- Customize is needed, otherwise remove this partials to use Quarto default one.
+$-- Instead of providing an empty one if your format does not need those insertion, set `biblio-config: false` in YAML configuration.
+$-- %%%%%%%%%%%%%%%%
+
+$-- biblio-config: false will not emit the bibliography configuration. 
+$-- This is useful if the bibliography configuration is already handled by a class file, for example.
+$if(biblio-config)$ $-- <-- QUARTO ONLY VARIABLE
+$if(natbib)$
+\usepackage[$natbiboptions$]{natbib}
+\bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
+$endif$
+$if(biblatex)$
+\usepackage[$if(biblio-style)$style=$biblio-style$,$endif$$for(biblatexoptions)$$biblatexoptions$$sep$,$endfor$]{biblatex}
+$for(bibliography)$
+\addbibresource{$bibliography$}
+$endfor$
+$endif$
+$endif$
